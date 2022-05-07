@@ -1,0 +1,462 @@
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.rotating-title-image {
+  height: 350px !important;
+}
+
+.title-image-bg {
+  background: #41295a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2f0743,
+    #41295a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2f0743,
+    #41295a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.rules {
+  position: absolute;
+  top: 60px;
+  right: 100px;
+}
+
+.rules-image {
+  height: 700px;
+}
+
+.clear-button {
+  position: absolute;
+  top: 60px;
+  left: 100px;
+}
+
+.score {
+  width: 200px;
+}
+
+.picked-images {
+  width: 220px;
+  height: auto;
+}
+
+/* Outcome */
+
+.user-outcome {
+  position: relative;
+  left: 100px;
+}
+
+.computer-outcome {
+  position: relative;
+  right: 100px;
+}
+
+.play-again-button {
+  width: 150px;
+  height: 70px;
+  background: #41295a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2f0743,
+    #41295a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2f0743,
+    #41295a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: 999;
+}
+
+/* Winning section */
+.user-victory-message {
+  position: absolute;
+  right: 42%;
+}
+
+.computer-victory-wrapper {
+  position: absolute;
+  right: 43%;
+  top: 62%;
+}
+
+.computer-victory-message {
+  position: absolute;
+  top: 400px;
+  right: 300px;
+}
+
+.winning-wrapper {
+  position: relative;
+  bottom: 400px;
+  left: 300px;
+}
+
+.sad-face {
+  width: 150px;
+}
+
+/* Styling for rgb winning message */
+@keyframes bgcolor {
+  0% {
+    background-color: #45a3e5;
+  }
+
+  30% {
+    background-color: #66bf39;
+  }
+
+  60% {
+    background-color: #eb670f;
+  }
+
+  90% {
+    background-color: #f35;
+  }
+
+  100% {
+    background-color: #864cbf;
+  }
+}
+
+/* styling for rotating image */
+.rgb-background {
+  -webkit-animation: bgcolor 20s infinite;
+  animation: bgcolor 10s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotate-image {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 50s linear infinite;
+}
+
+/* Smaller Screens */
+
+/* Screens 2000px width or under */
+@media all and (max-width: 2000px) {
+  #rules-mobile {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+  }
+  .clear-button {
+    position: absolute;
+    top: 15%;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .winning-wrapper {
+    position: relative;
+    bottom: 100px;
+    left: 400px;
+  }
+
+  .you-win-text {
+    font-size: 30px;
+  }
+  .losing-wrapper {
+    position: relative;
+    top: 320px;
+  }
+}
+
+/* Screens 1050 width or under */
+@media all and (max-width: 1050px) {
+  .play-again {
+    position: relative;
+    top: 170px;
+  }
+  .rules-image {
+    height: 375px;
+  }
+
+  .winning-wrapper {
+    position: relative;
+    bottom: 400px;
+    left: 300px;
+  }
+
+  .winning-wrapper {
+    position: relative;
+    bottom: 100px;
+    left: 400px;
+  }
+}
+
+/* Screens 800px width or under */
+@media all and (max-width: 800px) {
+  #rules-mobile {
+    position: absolute;
+    right: 1%;
+    top: 16%;
+  }
+
+  .clear-button {
+    position: absolute;
+    left: 1% !important;
+    top: 16% !important;
+  }
+
+  .rules-scoreboard-text {
+    font-size: 18px;
+  }
+
+  .clear-button {
+    position: absolute;
+    left: 1%;
+    top: 18%;
+  }
+
+  .clear-scoreboard-text {
+    font-size: 16px;
+  }
+
+  .user-score {
+    position: relative;
+    left: 8%;
+    top: 10%;
+  }
+
+  .user-score-content h1 {
+    font-size: 20px !important;
+  }
+
+  .rotating-title-image {
+    height: 140px !important;
+  }
+
+  .comp-score {
+    position: relative;
+    right: 8%;
+    top: 10%;
+  }
+
+  .computer-score-content h1 {
+    font-size: 20px !important;
+  }
+
+  .choices {
+    position: relative;
+    left: 10%;
+  }
+
+  .picked-images {
+    width: 150px;
+  }
+
+  .picked-text {
+    font-size: 16px !important;
+  }
+
+  .choose-image {
+    width: 200px;
+  }
+
+  .losing-wrapper {
+    position: absolute;
+    bottom: 100px;
+    right: 5px;
+  }
+
+  .winning-wrapper {
+    position: relative;
+    bottom: 100px;
+    left: 430px;
+    bottom: 160px;
+  }
+}
+
+/* Screens 715px width or under */
+@media all and (max-width: 715px) {
+  .play-again {
+    position: relative;
+    top: 200px;
+  }
+
+  .picked-images {
+    width: 100px;
+  }
+
+  .play-again {
+    position: relative;
+    top: 500px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .picked-images {
+    width: 50px;
+  }
+
+  .play-again {
+    position: relative;
+    top: 400px;
+    right: 120px;
+  }
+
+  .comp-image {
+    position: relative;
+    left: 90px;
+  }
+
+  .winning-wrapper {
+    position: relative;
+    bottom: 40px;
+    left: 450px;
+    top: 10px;
+  }
+
+  .losing-wrapper {
+    position: absolute;
+    top: 400px;
+    left: 1px;
+  }
+}
+
+/* iphone pro */
+@media screen and (max-height: 844px) and (max-width: 390px) {
+  .header-wrapper {
+    position: relative;
+    left: 25px;
+  }
+
+  #rules-mobile {
+    position: absolute;
+    top: 40%;
+    right: 3% !important;
+  }
+  .clear-button {
+    position: absolute;
+    top: 40% !important;
+    left: 3% !important;
+  }
+
+  .game-results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user-outcome {
+    position: relative;
+    margin-bottom: 10px;
+    left: 40px;
+    top: 10px;
+  }
+
+  .comp-image {
+    position: relative;
+    left: 130px;
+  }
+
+  .play-again {
+    position: relative;
+    top: -10px;
+    left: 190px;
+  }
+
+  .computer-outcome {
+    position: relative;
+    /* top: 200px;
+    right: 215px; */
+    top: 10px;
+    left: -90px;
+  }
+
+  .header-wrapper {
+    position: relative;
+    left: 40px;
+    top: 55px;
+  }
+
+  .outcome-wrapper {
+    position: relative;
+    top: 32px;
+  }
+
+  .game-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .play-wrapper {
+    position: relative;
+    top: 30px;
+  }
+
+  .mobile-play-images {
+    width: 100px;
+  }
+
+  .losing-wrapper {
+    position: relative;
+    top: 200px;
+    left: 110px;
+  }
+
+  .sad-face {
+    width: 100px;
+  }
+
+  .winning-wrapper {
+    position: relative;
+    margin-left: 120px;
+    margin-bottom: 300px;
+  }
+
+  .fireworks {
+    position: relative;
+    margin-left: 200px;
+  }
+
+  .confetti {
+    position: relative;
+    left: 500px !important;
+  }
+}
