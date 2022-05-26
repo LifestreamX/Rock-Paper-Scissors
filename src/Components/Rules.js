@@ -15,7 +15,7 @@ function Rules(props) {
         <Modal.Title id='contained-modal-title-vcenter'>Rules</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <p className='fs-4'>First to 5 points wins!</p>
+        <p className='fs-4'>First to 3 points wins!</p>
         <img src={rules} alt='' className='rules-image' />
       </Modal.Body>
       <Modal.Footer>

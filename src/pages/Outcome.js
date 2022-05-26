@@ -161,8 +161,7 @@ const Outcome = ({
 
           {/* Victory for user component  */}
           <div className='user-victory-message'>
-            {userScore === 5 && (
-              // <UserVictory/>
+            {userScore === 3 && (
               <UserVictory
                 handleClearScore={handleClearScore}
                 setCounter={setCounter}
@@ -171,7 +170,7 @@ const Outcome = ({
           </div>
 
           {/* Victory for Computer */}
-          {computerScore === 5 && (
+          {computerScore === 3 && (
             <div className='computer-victory-wrapper'>
               <ComputerVictory
                 handleClearScore={handleClearScore}

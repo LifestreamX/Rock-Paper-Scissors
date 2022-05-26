@@ -1,5 +1,5 @@
 import Button from 'react-bootstrap/Button';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import sad from '../images/sad.png';
 

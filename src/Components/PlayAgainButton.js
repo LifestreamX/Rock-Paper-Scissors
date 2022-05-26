@@ -10,7 +10,7 @@ const PlayAgainButton = ({ counter, reset, userScore, computerScore }) => {
           variant='Light'
           size='lg'
           className='fw-bolder text-white play-again-button'
-          hidden={counter > 0 || userScore >= 5 || computerScore >= 5}
+          hidden={counter > 0 || userScore >= 3 || computerScore >= 3}
         >
           Play Again
         </Button>

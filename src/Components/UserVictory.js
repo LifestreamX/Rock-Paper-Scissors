@@ -44,7 +44,6 @@ const UserVictory = ({ handleClearScore, setCounter }) => {
     }
   }, [fireCounter]);
 
-  console.log(fireCounter);
 
   // Win audio
   useEffect(() => {

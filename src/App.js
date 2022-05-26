@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Outcome from './pages/Outcome';
 import Play from './pages/Play';
 import Header from './Components/Header';
@@ -11,13 +11,10 @@ function App() {
   const [computerScore, setComputerScore] = useState(0);
   const [userChoice, setUserChoice] = useState(null);
   const [compChoice, setCompChoice] = useState(null);
-  const [results, setResults] = useState(null);
   const [modalShow, setModalShow] = useState(false);
   const [counter, setCounter] = useState(3);
   const [userWin, setUserWin] = useState('');
-  const [clearScore, setClearScore] = useState(0);
-  const [audioWin, setAudioWin] = useState(false);
-  const [audioLoss, setAudioLoss] = useState(false);
+
 
   const handleClearScore = () => {
     setComputerScore(0);

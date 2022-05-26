@@ -14,7 +14,6 @@ const Play = ({ setUserChoice, userChoice }) => {
     setUserChoice(e.target.id);
   };
 
-  console.log(userChoice);
 
   return (
     <main className='d-flex justify-content-center align-items-center h-25 mt-1 play-wrapper'>
