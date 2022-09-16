@@ -1,9 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   height: 100%;
+  width: 100%;
 }
 
 #root {
   height: 100%;
+  width: 100%;
 }
 
 .rotating-title-image {
@@ -173,9 +179,7 @@ body {
   animation: rotating 50s linear infinite;
 }
 
-/* Smaller Screens */
-
-/* Screens 2000px width or under */
+/* Mobile */
 @media all and (max-width: 2000px) {
   #rules-mobile {
     position: absolute;
@@ -204,7 +208,6 @@ body {
   }
 }
 
-/* Screens 1050 width or under */
 @media all and (max-width: 1050px) {
   .play-again {
     position: relative;
@@ -227,8 +230,12 @@ body {
   }
 }
 
-/* Screens 800px width or under */
 @media all and (max-width: 800px) {
+  body {
+    position: relative;
+    left: 20px;
+  }
+
   #rules-mobile {
     position: absolute;
     right: 1%;
@@ -310,24 +317,11 @@ body {
   }
 }
 
-/* Screens 715px width or under */
-@media all and (max-width: 715px) {
-  .play-again {
-    position: relative;
-    top: 200px;
+@media all and (max-width: 768px) {
+  /* Header */
+  .header {
   }
 
-  .picked-images {
-    width: 100px;
-  }
-
-  .play-again {
-    position: relative;
-    top: 500px;
-  }
-}
-
-@media all and (max-width: 500px) {
   .picked-images {
     width: 50px;
   }
@@ -355,10 +349,7 @@ body {
     top: 400px;
     left: 1px;
   }
-}
 
-/* iphone pro */
-@media screen and (max-height: 844px) and (max-width: 390px) {
   .header-wrapper {
     position: relative;
     left: 25px;
@@ -394,15 +385,14 @@ body {
   }
 
   .play-again {
-    position: relative;
-    top: -10px;
-    left: 190px;
+    position: absolute;
+    top: 40%;
+    left: 0;
   }
 
   .computer-outcome {
     position: relative;
-    /* top: 200px;
-    right: 215px; */
+
     top: 10px;
     left: -90px;
   }

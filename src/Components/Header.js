@@ -20,7 +20,7 @@ const Header = ({
       <Container className='d-flex flex-column justify-content-center align-items-center'>
         {/* Title section */}
         <Row className='mb-5 text-uppercase font-monospace w-100 text-center'>
-          <Col className='title-image-bg text-white bo p-5 rounded '>
+          <Col className='title-image-bg text-white bo p-5 rounded header'>
             <h1 className='fw-bold '>Rock Paper Scissors!</h1>
             {/* Rules section */}
             <Button
@@ -60,7 +60,6 @@ const Header = ({
             />
 
             {/* Computer score */}
-
             <div className='bg-danger rounded-pill h-25  mt-5 score  text-white comp-score '>
               <ComputerScore computerScore={computerScore} />
             </div>

@@ -126,7 +126,7 @@ const Outcome = ({
               <PickedImage className='picked-images ' />
             </div>
             {counter === 0 && (
-              <div className='d-flex justify-content-center mt-2 fs-4 fw-bolder text-uppercase'>
+              <div className='d-flex justify-content-center mt-2 fs-4 fw-bolder text-uppercase '>
                 <div>
                   {' '}
                   {userWin == 'win' && <p className='picked-text'>Wins</p>}
@@ -146,7 +146,6 @@ const Outcome = ({
 
         <Col className='d-flex justify-content-center align-items-center '>
           {/* Play again button */}
-
           {counter === 0 && (userScore === 5 || computerScore === 5) ? null : (
             <div className='play-again'>
               <PlayAgainButton
@@ -205,7 +204,7 @@ const Outcome = ({
               </div>
 
               {counter === 0 && (
-                <div className='d-flex justify-content-center mt-2 fs-4 fw-bolder text-uppercase'>
+                <div className='d-flex justify-content-center mt-2 fs-4 fw-bolder text-uppercase '>
                   <div>
                     {' '}
                     {userWin == 'win' && <p className='picked-text'>Lost</p>}
