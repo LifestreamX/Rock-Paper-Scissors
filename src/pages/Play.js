@@ -20,7 +20,7 @@ const Play = ({ setUserChoice, userChoice }) => {
       {/* Card choices section */}
       <Row className='mb-2 choices'>
         {/* Rock card */}
-        <Col className='mx-5'>
+        <Col className='mx-5 choices-col'>
           <Card
             style={{ width: '18rem' }}
             className='d-flex flex-column justify-content-center align-items-center p-3 shadow-lg border border-primary'
@@ -41,7 +41,7 @@ const Play = ({ setUserChoice, userChoice }) => {
         </Col>
 
         {/* Paper card */}
-        <Col className='mx-5'>
+        <Col className='mx-5 choices-col'>
           <Card
             style={{ width: '18rem' }}
             className='d-flex flex-column justify-content-center align-items-center p-3 shadow-lg border border-danger'
@@ -61,7 +61,7 @@ const Play = ({ setUserChoice, userChoice }) => {
         </Col>
 
         {/* Scissors card */}
-        <Col className='mx-5'>
+        <Col className='mx-5 choices-col'>
           <Card
             style={{ width: '18rem' }}
             className='d-flex flex-column justify-content-center align-items-center p-3 shadow-lg border border-success'

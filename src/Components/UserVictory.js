@@ -15,7 +15,6 @@ const UserVictory = ({ handleClearScore, setCounter }) => {
     width: '1000px',
     height: '1000px',
     zIndex: -1,
-    
   };
 
   // using use effect hook set  confetti off on win
@@ -44,7 +43,6 @@ const UserVictory = ({ handleClearScore, setCounter }) => {
     }
   }, [fireCounter]);
 
-
   // Win audio
   useEffect(() => {
     audioRef.current.play();
@@ -60,23 +58,26 @@ const UserVictory = ({ handleClearScore, setCounter }) => {
     <>
       <audio ref={audioRef} src='win.mp3' />
 
-      <ReactCanvasConfetti
-        // set the styles as for a usual react component
-        style={style}
-        // set the class name as for a usual react component
-        className={'confetti'}
-        // if value in this.state.fire cast to the logical true and will differ from the previous, then will be called new animation
-        fire={fire}
-        reset={reset}
-      />
+      <div className='confetti-wrapper'>
+        <ReactCanvasConfetti
+          // set the styles as for a usual react component
+          style={style}
+          // set the class name as for a usual react component
+          className={'confetti'}
+          // if value in this.state.fire cast to the logical true and will differ from the previous, then will be called new animation
+          fire={fire}
+          reset={reset}
+        />
+      </div>
+
       <div className='d-flex justify-content-center align-items-center flex-column winning-wrapper '>
-        <div className=' rounded p-5 rgb-background you-win-text'>
+        <div className=' rounded p-5 rgb-background you-win-wrapper'>
           <h1 className='text-white you-win-text '>You Win!</h1>
         </div>
         <Link to='/'>
           <Button
             variant='lg '
-            className='mt-3 rgb-background text-white fw-bolder'
+            className='mt-3 rgb-background text-white fw-bolder start-new-game-button'
             onClick={restartGame}
           >
             Start New Game

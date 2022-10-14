@@ -117,8 +117,8 @@ const Outcome = ({
   return (
     <main className='w-100 d-flex justify-content-center align-items-center outcome-wrapper '>
       <Row className='d-flex justify-content-center w-100 justify-content-center game-results'>
-        <Col className='d-flex justify-content-center align-items-center '>
-          <Card className='shadow-lg rounded-circle   bg-primary text-white p-5  d-flex justify-content-center h-100 user-outcome'>
+        <Col className='d-flex justify-content-center align-items-center results-col '>
+          <Card className='result-card shadow-lg rounded-circle   bg-primary text-white p-5  d-flex justify-content-center h-100 user-outcome'>
             <div className='d-flex justify-content-center align-items-center mb-2 fs-4 fw-bolder text-uppercase'>
               <div className='picked-text'>{userChoice} </div>
             </div>
@@ -144,7 +144,7 @@ const Outcome = ({
           </Card>
         </Col>
 
-        <Col className='d-flex justify-content-center align-items-center '>
+        <Col className='d-flex justify-content-center align-items-center outcome-wrapper'>
           {/* Play again button */}
           {counter === 0 && (userScore === 5 || computerScore === 5) ? null : (
             <div className='play-again'>
@@ -182,10 +182,9 @@ const Outcome = ({
         {/* Results from single match */}
         <Col className='d-flex  justify-content-center align-items-center computer-outcome'>
           {/* Countdown for comp */}
-
           <Card className='p-5  shadow-lg rounded-circle  bg-danger text-white d-flex justify-content-center comp-image'>
             <div className='d-flex flex-column justify-content-center align-items-center '>
-              <div className='d-flex justify-content-center align-items-center flex-column mb-2 fs-5 fw-bolder text-uppercase'>
+              <div className='countdown-wrapper d-flex justify-content-center align-items-center flex-column mb-2 fs-5 fw-bolder text-uppercase'>
                 {counter === 0 ? (
                   <div>
                     <div className='text-center fs-4'>

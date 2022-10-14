@@ -19,23 +19,22 @@ const Header = ({
     <header className='d-flex justify-content-center align-items-center h-50 mt-3 header-wrapper '>
       <Container className='d-flex flex-column justify-content-center align-items-center'>
         {/* Title section */}
-        <Row className='mb-5 text-uppercase font-monospace w-100 text-center'>
-          <Col className='title-image-bg text-white bo p-5 rounded header'>
-            <h1 className='fw-bold '>Rock Paper Scissors!</h1>
+        <Row className='mb-5 text-uppercase font-monospace w-100 text-center header-row'>
+          <Col className='title-image-bg text-white bo p-4 rounded header header-col'>
+            <h1 className='fw-bold header-title '>Rock Paper Scissors!</h1>
             {/* Rules section */}
             <Button
-              className='px-4 py-2 rules fs-2'
+              className=' rules fs-4 fw-bold rules-button position-absolute start-0 mx-3 my-5 '
               variant='info'
               onClick={() => setModalShow(true)}
               id='rules-mobile'
             >
               <span className='rules-scoreboard-text'>Rules</span>
-              
             </Button>
             <Rules show={modalShow} onHide={() => setModalShow(false)} />
             {/* Clear Scoreboard  */}
             <Button
-              className='clear-button fw-bolder fs-4'
+              className='clear-button fw-bold fw-bolder fs-4 position-absolute end-0 mx-3 my-5 '
               variant='warning'
               size='lg'
               onClick={handleClearScore}

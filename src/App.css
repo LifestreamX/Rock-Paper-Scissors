@@ -12,6 +12,7 @@ body {
   width: 100%;
 }
 
+/* Header */
 .rotating-title-image {
   height: 350px !important;
 }
@@ -29,21 +30,21 @@ body {
     #41295a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-
+/* 
 .rules {
   position: absolute;
   top: 60px;
   right: 100px;
-}
-
-.rules-image {
-  height: 700px;
-}
+} 
 
 .clear-button {
   position: absolute;
   top: 60px;
   left: 100px;
+} */
+
+.rules-image {
+  height: 700px;
 }
 
 .score {
@@ -55,7 +56,7 @@ body {
   height: auto;
 }
 
-/* Outcome */
+/* Outcome ------------------------------------------------------ */
 
 .user-outcome {
   position: relative;
@@ -82,6 +83,9 @@ body {
     #41295a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   z-index: 999;
+  position: relative;
+  bottom: 100px !important;
+  right: 20px;
 }
 
 /* Winning section */
@@ -179,8 +183,175 @@ body {
   animation: rotating 50s linear infinite;
 }
 
-/* Mobile */
-@media all and (max-width: 2000px) {
+/* Mobile --------------------------------------------- */
+
+/* Tablets / Small screens */
+@media screen and (max-width: 1025px) {
+  /* Top section */
+  .rules-scoreboard-text {
+    font-size: 1.2rem !important;
+  }
+
+  /* Modal */
+  .modal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .rules-image {
+    height: 400px;
+  }
+
+  .clear-scoreboard-text {
+    font-size: 1.2rem;
+  }
+
+  /* Middle section score and image */
+
+  /* User score component */
+  .user-title {
+    font-size: 1.6rem !important;
+    text-align: center;
+  }
+
+  .user-score {
+    font-size: 1.6rem !important;
+  }
+
+  /* Computer score component */
+  .comp-title {
+    font-size: 1.6rem !important;
+    text-align: center;
+  }
+
+  .comp-score {
+    font-size: 1.6rem !important;
+  }
+
+  .rotating-title-image {
+    height: 250px !important;
+  }
+
+  /* Bottom Card selection choices */
+  .choices-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px !important;
+  }
+
+  /* Outcome page */
+  .picked-images {
+    height: 100% !important;
+    width: 100%;
+  }
+
+  /* .play-again {
+    position: relative;
+    top: 200px;
+  } */
+
+  /* For the user winning blue card */
+  .results-col {
+    position: relative !important;
+    right: 80px !important;
+  }
+
+  /* For the comp winning red card */
+  .comp-image {
+    position: relative !important;
+    left: 80px !important;
+  }
+
+  /* Computer wins page */
+  /* Comp victory component */
+  .losing-wrapper {
+    position: relative;
+    left: 40px;
+    bottom: 10px;
+  }
+
+  /* User Wins Page */
+  /* User Win component */
+  .winning-wrapper {
+    position: relative;
+    bottom: 300px;
+  }
+
+  .confetti-wrapper {
+    position: relative;
+  }
+
+  .confetti {
+    position: absolute;
+    /* left: 440px !important; */
+  }
+
+  .you-win-wrapper {
+    position: relative;
+    left: 14%;
+    bottom: -10%;
+    top: 90px;
+  }
+
+  .start-new-game-button {
+    position: relative;
+    left: 75%;
+    top: 80px !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media all and (max-width: 768px) {
+
+  .header-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: rebeccapurple;
+  }
+
+  .header-row {
+  }
+
+  .header-col {
+  }
+
+  .header-title {
+  }
+
+  .rules-button {
+  }
+
+  .clear-button {
+  }
+} */
+
+/* @media all and (max-width: 2000px) {
   #rules-mobile {
     position: absolute;
     top: 15%;
@@ -318,7 +489,8 @@ body {
 }
 
 @media all and (max-width: 768px) {
-  /* Header */
+
+
   .header {
   }
 
@@ -449,4 +621,4 @@ body {
     position: relative;
     left: 500px !important;
   }
-}
+} */
