@@ -301,31 +301,162 @@ body {
   }
 }
 
+/* Mobile phones ----------------------------  */
+@media screen and (max-width: 480px) {
+  /* Top section */
 
+  .header-wrapper {
+    position: relative;
+    top: 0;
+    left: 40px;
+  }
 
+  .header-row {
+    background-color: red;
+  }
 
+  .header-title {
+    font-size: 24px;
+  }
 
+  .rules-scoreboard-text {
+    font-size: 1rem !important;
+  }
 
+  /* Modal */
+  .rules-image {
+    height: 270px;
+  }
 
+  .clear-scoreboard-text {
+    font-size: 1rem;
+  }
 
+  /* Middle section score and image */
 
+  /* User score component */
+  .user-title {
+    font-size: 1.2rem !important;
+    text-align: center;
+  }
 
+  .user-score {
+    font-size: 1.1rem !important;
+  }
 
+  /* Computer score component */
+  .comp-title {
+    font-size: 1.2rem !important;
+    text-align: center;
+  }
 
+  .comp-score {
+    font-size: 1.1rem !important;
+  }
 
+  .rotating-title-image {
+    height: 120px !important;
+  }
 
+  /* Bottom Card selection choices */
+  .choices-col {
+    margin-top: 20px !important;
+    position: relative;
+    left: 10%;
+  }
 
+  /* play component */
+  .choices-card {
+    width: 55% !important;
+  }
 
+  /* Outcome page */
+  .outcome-wrapper {
+    position: relative;
+    left: 40px !important;
+    top: 150px;
+  }
 
+  .user-outcome {
+    position: relative;
+    margin-right: 430px !important;
+  }
 
+  .comp-image {
+    margin-right: 190px !important;
+    position: relative;
+    top: -100px !important;
+  }
 
+  .picked-images {
+    width: 50px;
+  }
 
+  .play-again-button {
+    position: relative;
+    left: 60px !important;
+    top: -70px !important;
+  }
 
+  /* For the user winning blue card */
+  .results-col {
+    position: relative !important;
+    right: 80px !important;
+  }
 
+  /* For the comp winning red card */
+  .comp-image {
+    position: relative !important;
+    left: 100px !important;
+    bottom: 10px !important;
+  }
 
+  .user-outcome {
+    width: 80px !important;
+    bottom: 130px !important;
+    left: 300px !important;
+  }
 
+  .computer-outcome {
+    width: 80px !important;
+  }
 
+  /* Computer wins page */
+  /* Comp victory component */
+  .losing-wrapper {
+    position: relative;
+    left: 140px;
+    bottom: 70px;
+  }
 
+  /* User Wins Page */
+  /* User Win component */
+  .winning-wrapper {
+    position: relative;
+    bottom: 300px;
+  }
+
+  .confetti-wrapper {
+    position: relative;
+  }
+
+  .confetti {
+    position: absolute;
+    /* left: 440px !important; */
+  }
+
+  .you-win-wrapper {
+    position: relative;
+    left: 260px !important;
+    top: 90px;
+  }
+
+  .start-new-game-button {
+    position: relative;
+    left: 260px !important;
+    top: 80px !important;
+  }
+}
 
 /* @media all and (max-width: 768px) {
 

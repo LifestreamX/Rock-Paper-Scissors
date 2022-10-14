@@ -16,7 +16,7 @@ const Header = ({
   handleClearScore,
 }) => {
   return (
-    <header className='d-flex justify-content-center align-items-center h-50 mt-3 header-wrapper '>
+    <header className='d-flex justify-content-center align-items-center h-50 mt-3 header-wrapper'>
       <Container className='d-flex flex-column justify-content-center align-items-center'>
         {/* Title section */}
         <Row className='mb-5 text-uppercase font-monospace w-100 text-center header-row'>

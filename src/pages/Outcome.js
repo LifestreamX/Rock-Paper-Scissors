@@ -160,7 +160,7 @@ const Outcome = ({
 
           {/* Victory for user component  */}
           <div className='user-victory-message'>
-            {userScore === 3 && (
+            {userScore === 0 && (
               <UserVictory
                 handleClearScore={handleClearScore}
                 setCounter={setCounter}
