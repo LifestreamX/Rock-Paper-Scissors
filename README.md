@@ -2,9 +2,9 @@
 
 Rock Paper Scissors
 
-## Demo link: https://rockpaperscissors.tyler-allen.com/
 
-<!-- Access my site at [google.com](https://google.com) -->
+
+Access my site at https://rockpaperscissors.tyler-allen.com/
 
 ## About The App
 
