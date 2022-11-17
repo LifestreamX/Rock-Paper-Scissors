@@ -4,7 +4,7 @@ Rock Paper Scissors
 
 
 
-Access my site at https://rockpaperscissors.tyler-allen.com/
+Access my site at https://rockpaperscissors.tyler-allen.com
 
 ## About The App
 
