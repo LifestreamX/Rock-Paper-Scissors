@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import Spinner from 'react-bootstrap/spinner';
+import Spinner from 'react-bootstrap/spinner';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -197,7 +197,7 @@ const Outcome = ({
                 ) : (
                   <>
                     <div className='fs-1'>{counter}</div>
-                    {/* <Spinner animation='border' className='mt-3' /> */}
+                    <Spinner animation='border' className='mt-3' />
                   </>
                 )}
               </div>
