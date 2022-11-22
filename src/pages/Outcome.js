@@ -197,7 +197,7 @@ const Outcome = ({
                 ) : (
                   <>
                     <div className='fs-1'>{counter}</div>
-                    <Spinner animation='border' className='mt-3' />
+                    {/* <Spinner animation='border' className='mt-3' /> */}
                   </>
                 )}
               </div>
