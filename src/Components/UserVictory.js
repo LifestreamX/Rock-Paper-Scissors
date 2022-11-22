@@ -10,8 +10,8 @@ const UserVictory = ({ handleClearScore, setCounter }) => {
 
   const style = {
     position: 'relative',
-    top: 300,
-    left: 300,
+    top: 0,
+    left: 0,
     width: '1000px',
     height: '1000px',
     zIndex: -1,
@@ -55,10 +55,10 @@ const UserVictory = ({ handleClearScore, setCounter }) => {
   };
 
   return (
-    <>
-      <audio ref={audioRef} src='win.mp3' />
+    <div className='entire-victory-wrapper d-flex justify-content-center align-items-center bg-red'>
+      <audio ref={audioRef} src='' />
 
-      <div className='confetti-wrapper'>
+      <div className='confetti-wrapper d-flex position-absolute top-50 start-50 translate-middle'>
         <ReactCanvasConfetti
           // set the styles as for a usual react component
           style={style}
@@ -71,20 +71,20 @@ const UserVictory = ({ handleClearScore, setCounter }) => {
       </div>
 
       <div className='d-flex justify-content-center align-items-center flex-column winning-wrapper '>
-        <div className=' rounded p-5 rgb-background you-win-wrapper'>
+        <div className=' rounded p-3 rgb-background you-win-wrapper'>
           <h1 className='text-white you-win-text '>You Win!</h1>
         </div>
         <Link to='/'>
           <Button
             variant='lg '
-            className='mt-3 rgb-background text-white fw-bolder start-new-game-button'
+            className='mt-3 rgb-background text-white fw-bolder start-new-game-button '
             onClick={restartGame}
           >
             Start New Game
           </Button>
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 

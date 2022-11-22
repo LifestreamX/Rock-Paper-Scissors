@@ -14,7 +14,7 @@ function Rules(props) {
       <Modal.Header closeButton>
         <Modal.Title id='contained-modal-title-vcenter'>Rules</Modal.Title>
       </Modal.Header>
-        <p className='fs-4 mx-3'>First to 3 points wins!</p>
+      <p className='fs-4 mx-3'>First to 3 points wins!</p>
       <Modal.Body className='modal-wrapper'>
         <img src={rules} alt='' className='rules-image' />
       </Modal.Body>

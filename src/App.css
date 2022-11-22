@@ -3,13 +3,7 @@
 }
 
 body {
-  height: 100%;
-  width: 100%;
-}
-
-#root {
-  height: 100%;
-  width: 100%;
+  overflow-y: hidden;
 }
 
 /* Header */
@@ -30,18 +24,6 @@ body {
     #41295a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-/* 
-.rules {
-  position: absolute;
-  top: 60px;
-  right: 100px;
-} 
-
-.clear-button {
-  position: absolute;
-  top: 60px;
-  left: 100px;
-} */
 
 .rules-image {
   height: 700px;
@@ -58,16 +40,6 @@ body {
 
 /* Outcome ------------------------------------------------------ */
 
-.user-outcome {
-  position: relative;
-  left: 100px;
-}
-
-.computer-outcome {
-  position: relative;
-  right: 100px;
-}
-
 .play-again-button {
   width: 150px;
   height: 70px;
@@ -83,33 +55,14 @@ body {
     #41295a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   z-index: 999;
-  position: relative;
-  bottom: 100px !important;
-  right: 20px;
 }
 
-/* Winning section */
-.user-victory-message {
-  position: absolute;
-  right: 42%;
+.play-again-button {
+  top: 100px !important;
 }
 
-.computer-victory-wrapper {
-  position: absolute;
-  right: 43%;
-  top: 62%;
-}
-
-.computer-victory-message {
-  position: absolute;
-  top: 400px;
-  right: 300px;
-}
-
-.winning-wrapper {
-  position: relative;
-  bottom: 400px;
-  left: 300px;
+.losing-wrapper {
+  top: 75% !important;
 }
 
 .sad-face {
@@ -183,7 +136,13 @@ body {
   animation: rotating 50s linear infinite;
 }
 
-/* Mobile --------------------------------------------- */
+.modal-open {
+  padding-right: 0 !important;
+}
+
+/* Mobile ------------------------------------------------------------- */
+@media screen and (max-width: 1025px) {
+}
 
 /* Tablets / Small screens */
 @media screen and (max-width: 1025px) {
@@ -207,7 +166,6 @@ body {
   }
 
   /* Middle section score and image */
-
   /* User score component */
   .user-title {
     font-size: 1.6rem !important;
@@ -246,510 +204,35 @@ body {
     width: 100%;
   }
 
-  /* .play-again {
-    position: relative;
-    top: 200px;
-  } */
-
   /* For the user winning blue card */
-  .results-col {
-    position: relative !important;
-    right: 80px !important;
-  }
-
-  /* For the comp winning red card */
-  .comp-image {
-    position: relative !important;
-    left: 80px !important;
-  }
-
-  /* Computer wins page */
-  /* Comp victory component */
-  .losing-wrapper {
-    position: relative;
-    left: 40px;
-    bottom: 10px;
-  }
-
-  /* User Wins Page */
-  /* User Win component */
-  .winning-wrapper {
-    position: relative;
-    bottom: 300px;
-  }
-
-  .confetti-wrapper {
-    position: relative;
-  }
-
-  .confetti {
-    position: absolute;
-    /* left: 440px !important; */
+  .entire-victory-wrapper {
+    text-align: center;
+    padding: -10px;
   }
 
   .you-win-wrapper {
-    position: relative;
-    left: 14%;
-    bottom: -10%;
-    top: 90px;
-  }
-
-  .start-new-game-button {
-    position: relative;
-    left: 75%;
-    top: 80px !important;
+    padding: -50px !important;
   }
 }
 
 /* Mobile phones ----------------------------  */
-@media screen and (max-width: 480px) {
-  /* Top section */
-
-  .header-wrapper {
-    position: relative;
-    top: 0;
-    left: 40px;
+@media screen and (max-width: 768px) {
+  .user-score-content {
+    padding: 5px;
   }
 
-  .header-row {
-    background-color: red;
+  .computer-score-content {
+    padding: 5px;
   }
 
-  .header-title {
-    font-size: 24px;
-  }
-
-  .rules-scoreboard-text {
-    font-size: 1rem !important;
-  }
-
-  /* Modal */
-  .rules-image {
-    height: 270px;
-  }
-
-  .clear-scoreboard-text {
-    font-size: 1rem;
-  }
-
-  /* Middle section score and image */
-
-  /* User score component */
   .user-title {
     font-size: 1.2rem !important;
-    text-align: center;
   }
 
-  .user-score {
-    font-size: 1.1rem !important;
-  }
-
-  /* Computer score component */
   .comp-title {
     font-size: 1.2rem !important;
-    text-align: center;
-  }
-
-  .comp-score {
-    font-size: 1.1rem !important;
-  }
-
-  .rotating-title-image {
-    height: 120px !important;
-  }
-
-  /* Bottom Card selection choices */
-  .choices-col {
-    margin-top: 20px !important;
-    position: relative;
-    left: 10%;
-  }
-
-  /* play component */
-  .choices-card {
-    width: 55% !important;
-  }
-
-  /* Outcome page */
-  .outcome-wrapper {
-    position: relative;
-    left: 40px !important;
-    top: 150px;
-  }
-
-  .user-outcome {
-    position: relative;
-    margin-right: 430px !important;
-  }
-
-  .comp-image {
-    margin-right: 190px !important;
-    position: relative;
-    top: -100px !important;
-  }
-
-  .picked-images {
-    width: 50px;
-  }
-
-  .play-again-button {
-    position: relative;
-    left: 60px !important;
-    top: -70px !important;
-  }
-
-  /* For the user winning blue card */
-  .results-col {
-    position: relative !important;
-    right: 80px !important;
-  }
-
-  /* For the comp winning red card */
-  .comp-image {
-    position: relative !important;
-    left: 100px !important;
-    bottom: 10px !important;
-  }
-
-  .user-outcome {
-    width: 80px !important;
-    bottom: 130px !important;
-    left: 300px !important;
-  }
-
-  .computer-outcome {
-    width: 80px !important;
-  }
-
-  /* Computer wins page */
-  /* Comp victory component */
-  .losing-wrapper {
-    position: relative;
-    left: 140px;
-    bottom: 70px;
-  }
-
-  /* User Wins Page */
-  /* User Win component */
-  .winning-wrapper {
-    position: relative;
-    bottom: 300px;
-  }
-
-  .confetti-wrapper {
-    position: relative;
-  }
-
-  .confetti {
-    position: absolute;
-    /* left: 440px !important; */
-  }
-
-  .you-win-wrapper {
-    position: relative;
-    left: 260px !important;
-    top: 90px;
-  }
-
-  .start-new-game-button {
-    position: relative;
-    left: 260px !important;
-    top: 80px !important;
   }
 }
 
-/* @media all and (max-width: 768px) {
-
-  .header-wrapper {
-    position: relative;
-    width: 100%;
-    background-color: rebeccapurple;
-  }
-
-  .header-row {
-  }
-
-  .header-col {
-  }
-
-  .header-title {
-  }
-
-  .rules-button {
-  }
-
-  .clear-button {
-  }
-} */
-
-/* @media all and (max-width: 2000px) {
-  #rules-mobile {
-    position: absolute;
-    top: 15%;
-    right: 10%;
-  }
-  .clear-button {
-    position: absolute;
-    top: 15%;
-  }
+@media screen and (max-width: 500px) {
 }
-
-@media all and (max-width: 1400px) {
-  .winning-wrapper {
-    position: relative;
-    bottom: 100px;
-    left: 400px;
-  }
-
-  .you-win-text {
-    font-size: 30px;
-  }
-  .losing-wrapper {
-    position: relative;
-    top: 320px;
-  }
-}
-
-@media all and (max-width: 1050px) {
-  .play-again {
-    position: relative;
-    top: 170px;
-  }
-  .rules-image {
-    height: 375px;
-  }
-
-  .winning-wrapper {
-    position: relative;
-    bottom: 400px;
-    left: 300px;
-  }
-
-  .winning-wrapper {
-    position: relative;
-    bottom: 100px;
-    left: 400px;
-  }
-}
-
-@media all and (max-width: 800px) {
-  body {
-    position: relative;
-    left: 20px;
-  }
-
-  #rules-mobile {
-    position: absolute;
-    right: 1%;
-    top: 16%;
-  }
-
-  .clear-button {
-    position: absolute;
-    left: 1% !important;
-    top: 16% !important;
-  }
-
-  .rules-scoreboard-text {
-    font-size: 18px;
-  }
-
-  .clear-button {
-    position: absolute;
-    left: 1%;
-    top: 18%;
-  }
-
-  .clear-scoreboard-text {
-    font-size: 16px;
-  }
-
-  .user-score {
-    position: relative;
-    left: 8%;
-    top: 10%;
-  }
-
-  .user-score-content h1 {
-    font-size: 20px !important;
-  }
-
-  .rotating-title-image {
-    height: 140px !important;
-  }
-
-  .comp-score {
-    position: relative;
-    right: 8%;
-    top: 10%;
-  }
-
-  .computer-score-content h1 {
-    font-size: 20px !important;
-  }
-
-  .choices {
-    position: relative;
-    left: 10%;
-  }
-
-  .picked-images {
-    width: 150px;
-  }
-
-  .picked-text {
-    font-size: 16px !important;
-  }
-
-  .choose-image {
-    width: 200px;
-  }
-
-  .losing-wrapper {
-    position: absolute;
-    bottom: 100px;
-    right: 5px;
-  }
-
-  .winning-wrapper {
-    position: relative;
-    bottom: 100px;
-    left: 430px;
-    bottom: 160px;
-  }
-}
-
-@media all and (max-width: 768px) {
-
-
-  .header {
-  }
-
-  .picked-images {
-    width: 50px;
-  }
-
-  .play-again {
-    position: relative;
-    top: 400px;
-    right: 120px;
-  }
-
-  .comp-image {
-    position: relative;
-    left: 90px;
-  }
-
-  .winning-wrapper {
-    position: relative;
-    bottom: 40px;
-    left: 450px;
-    top: 10px;
-  }
-
-  .losing-wrapper {
-    position: absolute;
-    top: 400px;
-    left: 1px;
-  }
-
-  .header-wrapper {
-    position: relative;
-    left: 25px;
-  }
-
-  #rules-mobile {
-    position: absolute;
-    top: 40%;
-    right: 3% !important;
-  }
-  .clear-button {
-    position: absolute;
-    top: 40% !important;
-    left: 3% !important;
-  }
-
-  .game-results {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .user-outcome {
-    position: relative;
-    margin-bottom: 10px;
-    left: 40px;
-    top: 10px;
-  }
-
-  .comp-image {
-    position: relative;
-    left: 130px;
-  }
-
-  .play-again {
-    position: absolute;
-    top: 40%;
-    left: 0;
-  }
-
-  .computer-outcome {
-    position: relative;
-
-    top: 10px;
-    left: -90px;
-  }
-
-  .header-wrapper {
-    position: relative;
-    left: 40px;
-    top: 55px;
-  }
-
-  .outcome-wrapper {
-    position: relative;
-    top: 32px;
-  }
-
-  .game-results {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .play-wrapper {
-    position: relative;
-    top: 30px;
-  }
-
-  .mobile-play-images {
-    width: 100px;
-  }
-
-  .losing-wrapper {
-    position: relative;
-    top: 200px;
-    left: 110px;
-  }
-
-  .sad-face {
-    width: 100px;
-  }
-
-  .winning-wrapper {
-    position: relative;
-    margin-left: 120px;
-    margin-bottom: 300px;
-  }
-
-  .fireworks {
-    position: relative;
-    margin-left: 200px;
-  }
-
-  .confetti {
-    position: relative;
-    left: 500px !important;
-  }
-} */

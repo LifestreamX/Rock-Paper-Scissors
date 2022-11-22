@@ -14,13 +14,13 @@ const ComputerVictory = ({ handleClearScore, setCounter }) => {
   const restartGame = () => {
     handleClearScore();
     audioRef.current.pause();
-    setCounter(3)
+    setCounter(3);
   };
   return (
     <>
-      <audio ref={audioRef} src='loss.mp3' />
+      <audio ref={audioRef} src='' />
 
-      <div className='d-flex justify-content-center align-items-center flex-column losing-wrapper'>
+      <div className='d-flex flex-column position-absolute  start-50 translate-middle  losing-wrapper   '>
         <div className=' rounded p-2 bg-danger d-flex flex-column justify-content-center align-items-center '>
           <p className='text-white fs-2 fw-bolder m-3 mobile-text'>Computer </p>
           <p className='text-white fs-2 fw-bolder mobile-text'>Wins</p>
