@@ -3,7 +3,8 @@
 }
 
 body {
-  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: whitesmoke !important;
 }
 
 /* Header */
@@ -63,6 +64,11 @@ body {
 
 .losing-wrapper {
   top: 75% !important;
+}
+
+#loss-text {
+  color: red !important;
+  font-size: 2rem !important;
 }
 
 .sad-face {
@@ -141,8 +147,6 @@ body {
 }
 
 /* Mobile ------------------------------------------------------------- */
-@media screen and (max-width: 1025px) {
-}
 
 /* Tablets / Small screens */
 @media screen and (max-width: 1025px) {
@@ -235,4 +239,144 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+  #root {
+  }
+
+  body {
+  }
+
+  /* Header */
+  .rotating-title-image {
+    height: 150px !important;
+    position: relative;
+    top: 60px;
+  }
+
+  .user-score-wrapper {
+    position: relative;
+    left: 100px;
+    bottom: 10px;
+  }
+
+  .user-score-content {
+    padding: 0rem;
+  }
+
+  .picked-text {
+    font-size: 0.9rem;
+  }
+
+  .comp-score-wrapper {
+    position: relative;
+    right: 100px;
+    bottom: 10px;
+  }
+
+  .computer-score-content {
+    padding: 0rem;
+  }
+
+  .clear-button {
+    padding: 2px !important;
+    margin: 0 !important;
+  }
+
+  .clear-scoreboard-text {
+    font-size: 1rem !important;
+  }
+
+  .rules-button {
+    padding: 4px !important;
+  }
+
+  .rules-scoreboard-text {
+    font-size: 1rem !important;
+  }
+
+  .rules-image {
+    height: 300px;
+  }
+
+  /* Card choices */
+  .card-img-top {
+    width: 100px !important;
+  }
+
+  /* Outcome per match */
+
+  .play-again-button {
+    width: 120px;
+    font-size: 16px !important;
+    height: 50px !important;
+  }
+
+  .result-card {
+    width: 0px !important;
+  }
+
+  .picked-images {
+    width: 50px;
+  }
+
+  /* User Victory screen */
+  .entire-victory-wrapper {
+    position: relative;
+    top: 50px !important;
+  }
+
+  .you-win-text {
+    font-size: 1rem !important;
+  }
+
+  .start-new-game-button {
+    font-size: 1rem !important;
+  }
+
+  /* Computer Victory screen */
+
+  #text-wrapper {
+    background: none;
+  }
+
+  #loss-text {
+    font-size: 1.5rem !important;
+    color: red !important;
+  }
+
+  .sad-face {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .game-results {
+    position: relative;
+    bottom: 20px !important;
+  }
+
+  .play-again-button {
+    width: 90px;
+    font-size: 12px !important;
+    height: 50px !important;
+  }
+
+  /* Outcome per match */
+
+  .picked-images {
+    width: 40px;
+  }
+
+  /* User Victory screen */
+  .entire-victory-wrapper {
+    position: relative;
+    top: 50px !important;
+  }
+
+  .you-win-text {
+    font-size: 0.7rem !important;
+  }
+
+  .start-new-game-button {
+    font-size: 0.8rem !important;
+  }
 }

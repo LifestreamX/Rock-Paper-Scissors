@@ -48,7 +48,7 @@ const Header = ({
         <Row className='mb-2  '>
           <Col className='d-flex'>
             {/* User score */}
-            <div className=' bg-primary rounded-pill h-25 mt-5 score text-white user-score '>
+            <div className=' bg-primary rounded-pill h-25 mt-5 score text-white user-score user-score-wrapper '>
               <Score userScore={userScore} />
             </div>
             {/* Rotating image */}
@@ -59,7 +59,7 @@ const Header = ({
             />
 
             {/* Computer score */}
-            <div className='bg-danger rounded-pill h-25  mt-5 score  text-white comp-score '>
+            <div className='bg-danger rounded-pill h-25  mt-5 score  text-white comp-score comp-score-wrapper '>
               <ComputerScore computerScore={computerScore} />
             </div>
             <div className='computer-victory-message'></div>
