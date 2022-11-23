@@ -1,10 +1,9 @@
 * {
   box-sizing: border-box;
+  max-width: 100vw;
 }
 
 body {
-  overflow-x: hidden;
-  background-color: whitesmoke !important;
 }
 
 /* Header */
@@ -28,10 +27,6 @@ body {
 
 .rules-image {
   height: 700px;
-}
-
-.score {
-  width: 200px;
 }
 
 .picked-images {
@@ -146,6 +141,10 @@ body {
   padding-right: 0 !important;
 }
 
+.confetti-wrapper {
+  z-index: -100;
+}
+
 /* Mobile ------------------------------------------------------------- */
 
 /* Tablets / Small screens */
@@ -170,7 +169,13 @@ body {
   }
 
   /* Middle section score and image */
+
   /* User score component */
+  .user-score-wrapper {
+    position: relative;
+    left: 60px !important;
+  }
+
   .user-title {
     font-size: 1.6rem !important;
     text-align: center;
@@ -181,6 +186,11 @@ body {
   }
 
   /* Computer score component */
+  .comp-score-wrapper {
+    position: relative;
+    right: 60px;
+  }
+
   .comp-title {
     font-size: 1.6rem !important;
     text-align: center;
@@ -221,14 +231,6 @@ body {
 
 /* Mobile phones ----------------------------  */
 @media screen and (max-width: 768px) {
-  .user-score-content {
-    padding: 5px;
-  }
-
-  .computer-score-content {
-    padding: 5px;
-  }
-
   .user-title {
     font-size: 1.2rem !important;
   }
@@ -239,27 +241,43 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  #root {
+  .score-img-score-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  body {
-  }
-
-  /* Header */
-  .rotating-title-image {
-    height: 150px !important;
-    position: relative;
-    top: 60px;
-  }
-
+  /* User score component */
   .user-score-wrapper {
     position: relative;
-    left: 100px;
-    bottom: 10px;
+    left: 0px !important;
   }
 
-  .user-score-content {
-    padding: 0rem;
+  .user-title {
+    font-size: 1rem !important;
+  }
+
+  .user-score {
+    font-size: 1rem !important;
+  }
+
+  /* Computer score component */
+  .comp-score-wrapper {
+    position: relative;
+    /* right: 100px !important; */
+  }
+
+  .comp-title {
+    font-size: 1rem !important;
+  }
+
+  .comp-score {
+    font-size: 1rem !important;
+  }
+
+  .rotating-title-image {
+    height: 80px !important;
   }
 
   .picked-text {
@@ -268,8 +286,7 @@ body {
 
   .comp-score-wrapper {
     position: relative;
-    right: 100px;
-    bottom: 10px;
+    right: 0px;
   }
 
   .computer-score-content {
@@ -303,7 +320,6 @@ body {
   }
 
   /* Outcome per match */
-
   .play-again-button {
     width: 120px;
     font-size: 16px !important;
@@ -330,53 +346,107 @@ body {
 
   .start-new-game-button {
     font-size: 1rem !important;
+    z-index: 9999 !important;
   }
 
   /* Computer Victory screen */
 
   #text-wrapper {
     background: none;
+    position: relative;
+    top: 30px !important;
   }
 
   #loss-text {
-    font-size: 1.5rem !important;
+    font-size: 16px !important;
     color: red !important;
   }
 
   .sad-face {
     width: 60px;
   }
+
+  #computer-wins-new-game-button {
+    font-size: 12px !important;
+    position: relative;
+    top: 30px !important;
+  }
 }
 
 @media screen and (max-width: 350px) {
-  .game-results {
-    position: relative;
-    bottom: 20px !important;
-  }
-
   .play-again-button {
     width: 90px;
     font-size: 12px !important;
     height: 50px !important;
-  }
-
-  /* Outcome per match */
-
-  .picked-images {
-    width: 40px;
+    position: relative;
+    top: 60px !important;
   }
 
   /* User Victory screen */
   .entire-victory-wrapper {
-    position: relative;
     top: 50px !important;
+    right: 27%;
+    top: 100% !important;
   }
 
   .you-win-text {
-    font-size: 0.7rem !important;
+    font-size: 0.8rem !important;
   }
 
   .start-new-game-button {
     font-size: 0.8rem !important;
+    z-index: 99;
+ 
+  }
+
+  /* Computer Victory screen */
+
+  #text-wrapper {
+    background: none;
+    position: relative;
+    top: 190px !important;
+  }
+
+  #loss-text {
+    font-size: 16px !important;
+    color: red !important;
+  }
+
+  .sad-face {
+    width: 60px;
+  }
+
+  #computer-wins-new-game-button {
+    font-size: 10px !important;
+    left: 6px;
+    position: relative;
+    top: 180px !important;
+  }
+
+  /* Images */
+
+  .picked-images {
+    width: 30px;
+  }
+
+  .entire-victory-wrapper {
+    position: relative;
+    left: 0px !important;
+    top: 35px !important;
+  }
+
+  .game-results {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .comp-image {
+    top: 100px !important;
+  }
+
+  .losing-wrapper {
+    top: 680px !important;
   }
 }

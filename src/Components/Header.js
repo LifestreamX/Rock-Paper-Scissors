@@ -45,23 +45,25 @@ const Header = ({
         </Row>
 
         {/* Score and title image section */}
-        <Row className='mb-2  '>
-          <Col className='d-flex'>
+        <Row className='mb-5 w-100  '>
+          <Col className='d-flex justify-content-center align-items-center w-100 score-img-score-wrapper'>
             {/* User score */}
-            <div className=' bg-primary rounded-pill h-25 mt-5 score text-white user-score user-score-wrapper '>
+            <div className=' bg-primary rounded-pill h-25 mt-5 text-white mx-5 px-5 user-score-wrapper'>
               <Score userScore={userScore} />
             </div>
+
             {/* Rotating image */}
             <img
               src={titleImage}
               alt=''
-              className='img-fluid rotating-title-image m-5 rotate-image'
+              className='img-fluid rotating-title-image mt-5 rotate-image mx-5'
             />
 
             {/* Computer score */}
-            <div className='bg-danger rounded-pill h-25  mt-5 score  text-white comp-score comp-score-wrapper '>
+            <div className='bg-danger  rounded-pill h-25 mt-5 text-white  mx-5 px-5  text-center comp-score-wrapper'>
               <ComputerScore computerScore={computerScore} />
             </div>
+
             <div className='computer-victory-message'></div>
           </Col>
         </Row>

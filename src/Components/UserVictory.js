@@ -56,14 +56,14 @@ const UserVictory = ({ handleClearScore, setCounter }) => {
 
   return (
     <div className='entire-victory-wrapper d-flex justify-content-center align-items-center bg-red'>
-      <audio ref={audioRef} src='' />
+      <audio ref={audioRef} src='win.mp3' />
 
-      <div className='confetti-wrapper d-flex position-absolute top-50 start-50 translate-middle'>
+      <div className='confetti-wrapper d-flex position-absolute top-50 start-50 translate-middle display-none'>
         <ReactCanvasConfetti
           // set the styles as for a usual react component
           style={style}
           // set the class name as for a usual react component
-          className={'confetti'}
+          className='confetti'
           // if value in this.state.fire cast to the logical true and will differ from the previous, then will be called new animation
           fire={fire}
           reset={reset}
@@ -74,7 +74,7 @@ const UserVictory = ({ handleClearScore, setCounter }) => {
         <div className=' rounded p-3 rgb-background you-win-wrapper'>
           <h1 className='text-white you-win-text '>You Win!</h1>
         </div>
-        <Link to='/'>
+        <Link to='/' >
           <Button
             variant='lg '
             className='mt-3 rgb-background text-white fw-bolder start-new-game-button '
