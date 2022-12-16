@@ -3,12 +3,21 @@
   max-width: 100vw;
 }
 
-body {
-}
-
 /* Header */
 .rotating-title-image {
-  height: 350px !important;
+  height: 180px !important;
+  position: relative;
+  bottom: 75px;
+}
+
+.user-score-wrapper {
+  padding: 50px !important;
+  display: flex;
+}
+
+.comp-score-wrapper {
+  padding: 50px !important;
+  display: flex;
 }
 
 .title-image-bg {
@@ -29,8 +38,12 @@ body {
   height: 700px;
 }
 
+.images {
+  width: 150px !important;
+}
+
 .picked-images {
-  width: 220px;
+  width: 100px;
   height: auto;
 }
 
@@ -59,15 +72,18 @@ body {
 
 .losing-wrapper {
   top: 75% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #loss-text {
   color: red !important;
-  font-size: 2rem !important;
+  font-size: 1.2rem !important;
 }
 
 .sad-face {
-  width: 150px;
+  width: 70px;
 }
 
 /* Styling for rgb winning message */
@@ -145,6 +161,10 @@ body {
   z-index: -100;
 }
 
+#computer-wins-new-game-button {
+  font-size: 16px !important;
+}
+
 /* Mobile ------------------------------------------------------------- */
 
 /* Tablets / Small screens */
@@ -214,8 +234,7 @@ body {
 
   /* Outcome page */
   .picked-images {
-    height: 100% !important;
-    width: 100%;
+    width: 50% !important;
   }
 
   /* For the user winning blue card */
@@ -227,16 +246,28 @@ body {
   .you-win-wrapper {
     padding: -50px !important;
   }
+
+  .picked-images {
+    width: 80px !important;
+  }
 }
 
 /* Mobile phones ----------------------------  */
 @media screen and (max-width: 768px) {
+  .images {
+    width: 70px !important;
+  }
+
   .user-title {
     font-size: 1.2rem !important;
   }
 
   .comp-title {
     font-size: 1.2rem !important;
+  }
+
+  .picked-images {
+    width: 50% !important;
   }
 }
 
@@ -252,6 +283,7 @@ body {
   .user-score-wrapper {
     position: relative;
     left: 0px !important;
+    padding: 0px !important;
   }
 
   .user-title {
@@ -265,7 +297,6 @@ body {
   /* Computer score component */
   .comp-score-wrapper {
     position: relative;
-    /* right: 100px !important; */
   }
 
   .comp-title {
@@ -278,6 +309,7 @@ body {
 
   .rotating-title-image {
     height: 80px !important;
+    top: 0px;
   }
 
   .picked-text {
@@ -319,19 +351,12 @@ body {
     width: 100px !important;
   }
 
+ 
   /* Outcome per match */
   .play-again-button {
-    width: 120px;
-    font-size: 16px !important;
+    width: 80px;
+    font-size: 12px !important;
     height: 50px !important;
-  }
-
-  .result-card {
-    width: 0px !important;
-  }
-
-  .picked-images {
-    width: 50px;
   }
 
   /* User Victory screen */
@@ -350,7 +375,6 @@ body {
   }
 
   /* Computer Victory screen */
-
   #text-wrapper {
     background: none;
     position: relative;
@@ -371,9 +395,25 @@ body {
     position: relative;
     top: 30px !important;
   }
+
+  .losing-wrapper {
+    bottom: 0;
+    margin-top: 60px;
+  }
+
+  .results-col {
+    width: 0px !important;
+  }
+
+  .result-card {
+  }
+
+  .picked-images {
+    width: 50px !important;
+  }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 375px) {
   .play-again-button {
     width: 90px;
     font-size: 12px !important;
@@ -383,11 +423,7 @@ body {
   }
 
   /* User Victory screen */
-  .entire-victory-wrapper {
-    top: 50px !important;
-    right: 27%;
-    top: 100% !important;
-  }
+
 
   .you-win-text {
     font-size: 0.8rem !important;
@@ -396,57 +432,24 @@ body {
   .start-new-game-button {
     font-size: 0.8rem !important;
     z-index: 99;
- 
   }
 
   /* Computer Victory screen */
+  .losing-wrapper {
+    top: 700px !important;
+  }
 
   #text-wrapper {
     background: none;
-    position: relative;
-    top: 190px !important;
   }
 
   #loss-text {
-    font-size: 16px !important;
+    font-size: 12px !important;
     color: red !important;
+    display: inline;
   }
 
   .sad-face {
-    width: 60px;
-  }
-
-  #computer-wins-new-game-button {
-    font-size: 10px !important;
-    left: 6px;
-    position: relative;
-    top: 180px !important;
-  }
-
-  /* Images */
-
-  .picked-images {
     width: 30px;
-  }
-
-  .entire-victory-wrapper {
-    position: relative;
-    left: 0px !important;
-    top: 35px !important;
-  }
-
-  .game-results {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .comp-image {
-    top: 100px !important;
-  }
-
-  .losing-wrapper {
-    top: 680px !important;
   }
 }

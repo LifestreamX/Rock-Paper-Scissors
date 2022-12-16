@@ -114,13 +114,15 @@ const Outcome = ({
   return (
     <main className='w-100 d-flex justify-content-center align-items-center outcome-wrapper '>
       <Row className='d-flex justify-content-center w-100 justify-content-center game-results'>
+        
+        
         <Col className='d-flex justify-content-center align-items-center results-col '>
           <Card className='result-card shadow-lg rounded-circle bg-primary text-white p-5  d-flex justify-content-center h-100 user-outcome'>
             <div className='d-flex justify-content-center align-items-center mb-2 fs-4 fw-bolder text-uppercase'>
               <div className='picked-text'>{userChoice} </div>
             </div>
             <div className='d-flex justify-content-center'>
-              <PickedImage className='picked-images ' />
+              <PickedImage className='picked-images' />
             </div>
             {counter === 0 && (
               <div className='d-flex justify-content-center mt-2 fs-4 fw-bolder text-uppercase '>
@@ -177,12 +179,10 @@ const Outcome = ({
         </Col>
 
         {/* Results from single match */}
-
-        <Col className='d-flex justify-content-center align-items-center results-col'>
-          {/* Countdown for comp */}
+        <Col className='d-flex justify-content-center align-items-center results-col '>
           <Card className='result-card shadow-lg rounded-circle bg-danger text-white p-5  d-flex justify-content-center h-100 comp-image'>
-            <div className='d-flex flex-column justify-content-center align-items-center '>
-              <div className='countdown-wrapper d-flex justify-content-center align-items-center flex-column mb-2 fs-5 fw-bolder text-uppercase'>
+            <div className='d-flex flex-column justify-content-center align-items-center outcome-wrap  '>
+              <div className=' countdown-wrapper d-flex justify-content-center align-items-center flex-column mb-2 fs-5 fw-bolder text-uppercase'>
                 {counter === 0 ? (
                   <div>
                     <div className='text-center fs-4'>
@@ -201,7 +201,7 @@ const Outcome = ({
               </div>
 
               {counter === 0 && (
-                <div className='d-flex justify-content-center mt-2 fs-4 fw-bolder text-uppercase '>
+                <div className=' d-flex justify-content-center mt-2 fs-4 fw-bolder text-uppercase  '>
                   <div>
                     {' '}
                     {userWin == 'win' && <p className='picked-text'>Lost</p>}

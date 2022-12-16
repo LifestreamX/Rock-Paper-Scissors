@@ -26,7 +26,7 @@ const Play = ({ setUserChoice, userChoice }) => {
           >
             {' '}
             <div className='mobile-play-images'>
-              <Card.Img variant='top' src={Rock} />
+              <Card.Img variant='top' src={Rock} className='images' />
             </div>
             <Card.Body className='d-flex flex-column justify-content-center align-items-center'>
               <Card.Title className='p-2 fs-3'>Rock</Card.Title>
@@ -46,7 +46,11 @@ const Play = ({ setUserChoice, userChoice }) => {
             className='choices-card d-flex flex-column justify-content-center align-items-center p-3 shadow-lg border border-danger'
           >
             <div className='mobile-play-images'>
-              <Card.Img variant='top' src={Paper} className='choose-image' />
+              <Card.Img
+                variant='top'
+                src={Paper}
+                className='choose-image images '
+              />
             </div>
             <Card.Body className='d-flex flex-column justify-content-center align-items-center'>
               <Card.Title className='p-2 fs-3'>Paper</Card.Title>
@@ -66,7 +70,11 @@ const Play = ({ setUserChoice, userChoice }) => {
             className='choices-card  d-flex flex-column justify-content-center align-items-center p-3 shadow-lg border border-success'
           >
             <div className='mobile-play-images'>
-              <Card.Img variant='top' src={Scissors} className='choose-image' />
+              <Card.Img
+                variant='top'
+                src={Scissors}
+                className='choose-image images'
+              />
             </div>
             <Card.Body className='d-flex flex-column justify-content-center align-items-center'>
               <Card.Title className='p-2 fs-3'>Scissors</Card.Title>
